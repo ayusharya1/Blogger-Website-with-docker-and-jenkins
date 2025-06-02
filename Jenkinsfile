@@ -4,8 +4,8 @@ pipeline{
         stage("Build and run with docker compose"){
             steps{
                 echo 'Starting Docker Compose build and run'
-                sh 'docker-compose down'
-                sh 'docker-compose up -d --build'
+                sh 'docker compose down'
+                sh 'docker compose up -d --build'
             }
         }
         stage('Check Running Containers') {
